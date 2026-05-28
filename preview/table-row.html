@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+table{width:100%;border-collapse:collapse;font:400 12px/16px Roboto;color:#3A424A}
+thead th{background:#F8FAFD;padding:10px 12px;text-align:left;font:500 12px/16px Roboto;color:#3A424A;border-bottom:1px solid #E8E9EA;letter-spacing:.01em}
+tbody td{padding:12px;border-bottom:1px solid #EEF0F3}
+tbody tr.attention{background:#FFF4F4}
+tbody tr:hover{background:#F8FAFD}
+.tag{display:inline-flex;align-items:center;gap:4px;padding:1px 8px;border-radius:2px;font:400 12px/18px Roboto;border:1px solid}
+.t-green{background:#F6FFED;border-color:#B7EB8F;color:#389E0D}
+.t-red{background:#FFF1F0;border-color:#FFA39E;color:#CF1322}
+.t-gold{background:#FFFBE6;border-color:#FFE58F;color:#D7A718}
+.link{color:#1677FF;text-decoration:none}
+</style></head><body><div class="card" style="padding:16px 24px">
+<div class="label" style="margin-bottom:10px">Data table · compact rows, status tag in-row</div>
+<div style="border:1px solid #E8E9EA;border-radius:6px;overflow:hidden">
+<table>
+<thead><tr><th style="width:44%">Patient · MRN</th><th>Payor</th><th>Status</th><th>Last Update</th><th style="text-align:right">Action</th></tr></thead>
+<tbody>
+<tr><td><div style="font-weight:500">Marvin McKinney</div><div style="color:#6A717D">MRN 102-884-19</div></td><td>UHC</td><td><span class="tag t-green">● Approved</span></td><td>03/13/25</td><td style="text-align:right"><a class="link" href="#">View Details</a></td></tr>
+<tr class="attention"><td><div style="font-weight:500">Esther Howard</div><div style="color:#6A717D">MRN 102-884-22</div></td><td>Aetna</td><td><span class="tag t-red">● Needs Attention</span></td><td>03/12/25</td><td style="text-align:right"><a class="link" href="#">View Details</a></td></tr>
+<tr><td><div style="font-weight:500">Wade Warren</div><div style="color:#6A717D">MRN 102-884-31</div></td><td>Anthem</td><td><span class="tag t-gold">● Pending</span></td><td>03/12/25</td><td style="text-align:right"><a class="link" href="#">View Details</a></td></tr>
+</tbody>
+</table>
+</div></div></body></html>
