@@ -1,0 +1,147 @@
+/* ──────────────────────────────────────────────────────────────────
+   WellSky Eligibility & Auth — Design Tokens
+   Sourced directly from the Figma file (Main-Page + Other-Assets).
+   Usage counts behind each token come from METADATA.md.
+   ────────────────────────────────────────────────────────────────── */
+
+/* Fonts ────────────────────────────────────────────────────────── */
+@font-face { font-family: "Roboto"; src: url("./fonts/Roboto-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("./fonts/Roboto-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("./fonts/Roboto-Italic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("./fonts/Roboto-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("./fonts/Roboto-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("./fonts/Roboto-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  /* ── Brand / Primary ─────────────────────────────────────────
+     WellSky uses a deep navy-slate as the chrome color (top
+     header gradient) and a linked blue for links / active states.
+     A strong teal appears as the brand-accent (charts, badges). */
+  --ws-header-top:     rgb(56, 71, 90);     /* header gradient — top */
+  --ws-header-mid:     rgb(44, 60, 80);     /* header gradient — 42% */
+  --ws-header-bottom:  rgb(28, 45, 66);     /* header gradient — bottom */
+  --ws-navy-900:       rgb(28, 45, 66);
+  --ws-navy-800:       rgb(44, 60, 80);
+  --ws-navy-700:       rgb(56, 71, 90);
+  --ws-navy-600:       rgb(58, 66, 74);     /* 570× — primary body text */
+  --ws-navy-500:       rgb(98, 109, 138);   /* 902× — secondary text / iconography */
+  --ws-navy-400:       rgb(106, 113, 125);  /* 444× — tertiary text */
+  --ws-navy-300:       rgb(216, 215, 228);  /* 520× — strokes */
+
+  /* ── Accent Blues ─────────────────────────────────────────── */
+  --ws-blue-primary:   rgb(22, 119, 255);   /* 1360× — links, primary CTA border/text */
+  --ws-blue-chart:     rgb(14, 145, 198);   /* 400× — chart fill */
+  --ws-blue-teal:      rgb(63, 126, 161);   /* 453× — chart/tag */
+  --ws-blue-mid:       rgb(38, 108, 160);   /* typography specimen hero */
+  --ws-blue-sky:       rgb(1, 132, 247);    /* 270× — secondary link */
+  --ws-blue-25:        rgb(240, 245, 255);  /* 239× — primary bg tint */
+
+  /* ── Brand Teal (charts) ──────────────────────────────────── */
+  --ws-teal-700:       rgb(39, 105, 102);   /* 1078× — brand teal */
+
+  /* ── Semantic ─────────────────────────────────────────────── */
+  --ws-danger:         rgb(207, 19, 34);    /* 760× — alerts, attention counts */
+  --ws-danger-bg:      rgb(255, 244, 244);  /* row highlight — needs attention */
+  --ws-danger-bg-soft: rgba(255, 231, 230, 0.65); /* alert banner tint */
+  --ws-danger-strong:  rgb(255, 40, 40);
+
+  --ws-success:        rgb(56, 158, 13);    /* 214× — approved / success text */
+  --ws-success-soft:   rgb(110, 194, 108);  /* 539× — chip/graph fill */
+
+  --ws-warning:        rgb(215, 167, 24);   /* 306× — pending/partial */
+  --ws-processing:     rgb(102, 96, 166);   /* 401× — automation / in-progress */
+  --ws-purple-accent:  rgb(151, 71, 255);   /* 201× — secondary accent */
+
+  /* ── Neutrals / Surfaces ──────────────────────────────────── */
+  --ws-surface:        rgb(255, 255, 255);
+  --ws-surface-alt:    rgb(250, 250, 252);
+  --ws-surface-2:      rgb(248, 250, 253);
+  --ws-border-1:       rgb(232, 233, 234);  /* 299× — card borders */
+  --ws-border-2:       rgb(238, 240, 243);  /* 601× — dividers */
+  --ws-border-3:       rgb(216, 216, 216);  /* heavy card stroke */
+  --ws-border-soft:    rgb(240, 240, 240);
+  --ws-mute:           rgb(217, 217, 217);
+  --ws-hairline:       rgb(229, 229, 229);
+  --ws-text-primary:   rgb(58, 66, 74);
+  --ws-text-body:      rgb(96, 93, 93);     /* 685× */
+  --ws-text-muted:     rgb(106, 113, 125);
+  --ws-text-invert:    rgb(255, 255, 255);
+
+  /* ── Elevation ────────────────────────────────────────────── */
+  --ws-shadow-xs: 0 1px 0 rgba(0, 0, 0, 0.04);
+  --ws-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --ws-shadow-md: 0 6px 14px rgba(0, 0, 0, 0.043);
+  --ws-shadow-lg: 0 22px 26px rgba(86, 86, 86, 0.09); /* card shadow in dashboard */
+  --ws-shadow-focus: 0 0 0 3px rgba(22, 119, 255, 0.18);
+
+  /* ── Radii ────────────────────────────────────────────────── */
+  --ws-radius-xs: 2px;   /* tables, chips */
+  --ws-radius-sm: 4px;   /* buttons, inputs */
+  --ws-radius-md: 6px;
+  --ws-radius-lg: 8px;   /* cards */
+  --ws-radius-xl: 12px;  /* hero blocks */
+  --ws-radius-2xl: 24px; /* large containers */
+  --ws-radius-pill: 999px;
+
+  /* ── Spacing scale (4px base) ─────────────────────────────── */
+  --ws-space-0: 0;
+  --ws-space-1: 4px;
+  --ws-space-2: 8px;
+  --ws-space-3: 12px;
+  --ws-space-4: 16px;
+  --ws-space-5: 20px;
+  --ws-space-6: 24px;
+  --ws-space-8: 32px;
+  --ws-space-10: 40px;
+  --ws-space-12: 48px;
+
+  /* ── Typography — base ───────────────────────────────────── */
+  --ws-font-sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --ws-font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale — mapped directly from Figma Typography page */
+  --ws-hero-size: 36px;    --ws-hero-lh: 42px;   /* Hero Title */
+  --ws-h1-size:   32px;    --ws-h1-lh:   40px;
+  --ws-h2-size:   28px;    --ws-h2-lh:   34px;
+  --ws-h3-size:   24px;    --ws-h3-lh:   28px;
+  --ws-h4-size:   20px;    --ws-h4-lh:   24px;
+  --ws-body-lg:   18px;    --ws-body-lg-lh: 22px;   /* "Paragraph Large" per figma */
+  --ws-body-md:   16px;    --ws-body-md-lh: 20px;   /* Paragraph Medium */
+  --ws-body-sm:   14px;    --ws-body-sm-lh: 18px;   /* Paragraph Small — most common body */
+  --ws-body-xs:   12px;    --ws-body-xs-lh: 16px;   /* Paragraph X-Small — table cells */
+  --ws-overline:  11px;    --ws-overline-lh: 14px;  /* Overline / label */
+
+  /* Weights */
+  --ws-weight-light:    300;
+  --ws-weight-regular:  400;
+  --ws-weight-medium:   500;
+  --ws-weight-semibold: 600;
+  --ws-weight-bold:     700;
+
+  /* Header Nav */
+  --ws-header-height: 72px;
+}
+
+/* ── Semantic type helpers ──────────────────────────────────── */
+html { font-family: var(--ws-font-sans); color: var(--ws-text-primary); }
+
+.ws-hero    { font: var(--ws-weight-medium) var(--ws-hero-size)/var(--ws-hero-lh) var(--ws-font-sans); color: var(--ws-text-primary); }
+.ws-h1      { font: var(--ws-weight-medium) var(--ws-h1-size)/var(--ws-h1-lh) var(--ws-font-sans); color: var(--ws-text-primary); }
+.ws-h2      { font: var(--ws-weight-medium) var(--ws-h2-size)/var(--ws-h2-lh) var(--ws-font-sans); color: var(--ws-text-primary); }
+.ws-h3      { font: var(--ws-weight-medium) var(--ws-h3-size)/var(--ws-h3-lh) var(--ws-font-sans); color: var(--ws-text-primary); }
+.ws-h4      { font: var(--ws-weight-medium) var(--ws-h4-size)/var(--ws-h4-lh) var(--ws-font-sans); color: var(--ws-text-primary); }
+.ws-body-lg { font: var(--ws-weight-regular) var(--ws-body-lg)/var(--ws-body-lg-lh) var(--ws-font-sans); }
+.ws-body    { font: var(--ws-weight-regular) var(--ws-body-md)/var(--ws-body-md-lh) var(--ws-font-sans); }
+.ws-body-sm { font: var(--ws-weight-regular) var(--ws-body-sm)/var(--ws-body-sm-lh) var(--ws-font-sans); }
+.ws-body-xs { font: var(--ws-weight-regular) var(--ws-body-xs)/var(--ws-body-xs-lh) var(--ws-font-sans); }
+.ws-overline{ font: var(--ws-weight-medium) var(--ws-overline)/var(--ws-overline-lh) var(--ws-font-sans); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ws-text-muted); }
+.ws-label   { font: var(--ws-weight-medium) var(--ws-body-sm)/var(--ws-body-sm-lh) var(--ws-font-sans); color: var(--ws-text-primary); }
+.ws-link    { color: var(--ws-blue-primary); text-decoration: none; }
+.ws-link:hover { text-decoration: underline; }
+
+/* ── Header gradient — the signature visual ──────────────── */
+.ws-header-bg {
+  background: linear-gradient(var(--ws-header-top) 0%, var(--ws-header-mid) 42%, var(--ws-header-bottom) 100%);
+  color: var(--ws-text-invert);
+  height: var(--ws-header-height);
+}
