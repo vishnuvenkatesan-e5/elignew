@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+.chip{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #E8E9EA;border-radius:6px;background:#fff;min-width:150px}
+.chip .mark{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#EAE9F5;color:#6660A6}
+.chip .lbl{font:400 12px/14px Roboto;color:#6A717D}
+.chip .num{font:500 20px/24px Roboto;color:#3A424A}
+.chip.attention .mark{background:#FFE7E6;color:#CF1322}
+</style></head><body><div class="card">
+<div class="label" style="margin-bottom:10px">KPI chip · summary bar above dashboards</div>
+<div class="row">
+<div class="chip"><div class="mark">◔</div><div><div class="lbl">All Patients</div><div class="num">120</div></div></div>
+<div class="chip"><div class="mark">⏱</div><div><div class="lbl">Pending Submission</div><div class="num">02</div></div></div>
+<div class="chip"><div class="mark" style="background:#E6F5F4;color:#276966">●</div><div><div class="lbl">Active</div><div class="num">115</div></div></div>
+<div class="chip"><div class="mark" style="background:#FAFAFA;color:#6A717D">●</div><div><div class="lbl">Inactive</div><div class="num">01</div></div></div>
+<div class="chip attention"><div class="mark">!</div><div><div class="lbl">Exceptions</div><div class="num">01</div></div></div>
+<div class="chip attention"><div class="mark">⚠</div><div><div class="lbl">Eligibility Alerts</div><div class="num">02</div></div></div>
+</div>
+</div></body></html>
