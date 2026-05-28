@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+.field{display:flex;flex-direction:column;gap:4px}
+.field label{font:500 12px/16px Roboto;color:#3A424A}
+.input{height:32px;border:1px solid #D8D8D8;border-radius:4px;padding:0 11px;font:400 14px/20px Roboto;color:#3A424A;outline:none;background:#fff;min-width:180px}
+.input:focus{border-color:#1677FF;box-shadow:0 0 0 3px rgba(22,119,255,.18)}
+.input.err{border-color:#CF1322}
+.hint{font:400 12px/16px Roboto;color:#CF1322}
+.select{height:32px;border:1px solid #D8D8D8;border-radius:4px;padding:0 28px 0 11px;font:400 14px/20px Roboto;color:#3A424A;background:#fff;min-width:180px;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#6A717D 50%),linear-gradient(135deg,#6A717D 50%,transparent 50%);background-position:calc(100% - 16px) 14px,calc(100% - 11px) 14px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+</style></head><body><div class="card">
+<div class="label" style="margin-bottom:10px">Form controls</div>
+<div class="row" style="align-items:flex-end">
+<div class="field"><label>Patient</label><input class="input" placeholder="Search by name or MRN" /></div>
+<div class="field"><label>Payor</label><select class="select"><option>UHC</option><option>Aetna</option><option>Anthem</option><option>Medicare</option></select></div>
+<div class="field"><label>Elig Initiated</label><input class="input" value="02/13/25 – 03/13/25" /></div>
+<div class="field"><label>MRN</label><input class="input err" value="102-884-" /><span class="hint">MRN must be 9 digits</span></div>
+</div>
+</div></body></html>
