@@ -1,0 +1,10 @@
+@import url("../colors_and_type.css");
+html, body { margin: 0; padding: 0; background: #fff; font-family: var(--ws-font-sans); color: var(--ws-text-primary); -webkit-font-smoothing: antialiased; }
+.card { padding: 20px 24px; box-sizing: border-box; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.swatch { width: 72px; height: 56px; border-radius: 6px; border: 1px solid var(--ws-border-1); display: flex; flex-direction: column; justify-content: flex-end; padding: 6px 8px; box-sizing: border-box; }
+.swatch .name { font: 500 11px/14px var(--ws-font-sans); color: var(--ws-text-primary); }
+.swatch .hex { font: 400 10px/12px var(--ws-font-sans); color: var(--ws-text-muted); }
+.swatch.dark .name, .swatch.dark .hex { color: #fff; }
+.label { font: 500 11px/14px var(--ws-font-sans); color: var(--ws-text-muted); letter-spacing: 0.04em; text-transform: uppercase; }
